@@ -13,6 +13,7 @@ import java.util.Random;
  */
 public class Dip {
 
+    // consts
     private static final int NUMBER_OF_NUMBERS = 5;
     private static final int NUMBER_OF_STARS = 2;
     private static final int MAX_NUMBER = 50;
@@ -26,6 +27,7 @@ public class Dip {
         starts = new SetOfNaturals();
     }
 
+    // use of consts instead of "magic numbers"
     public Dip(int[] arrayOfNumbers, int[] arrayOfStarts) {
         this();
 
@@ -46,6 +48,7 @@ public class Dip {
         return starts;
     }
 
+    // use of consts instead of "magic numbers"
     public static Dip generateRandomDip() {
         Random generator = new Random();
 
@@ -100,6 +103,8 @@ public class Dip {
      *
      * @return formatted string with data
      */
+
+    // changed method
     public String format() {
         StringBuilder sb = new StringBuilder();
         sb.append("N[");

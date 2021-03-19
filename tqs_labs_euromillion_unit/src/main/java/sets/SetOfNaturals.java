@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class SetOfNaturals implements Iterable<Integer> {
-
+	// unchanged piece of code
 	private ArrayList<Integer> collection = new ArrayList<>();
 
 	public void add(int element) {

@@ -1,0 +1,11 @@
+Author: Anth0nyPereira
+
+- Quais as classes ou métodos que oferecem menos coverage?
+NOTA: NÃO CONSIDEREI O format() DO CuponEuromillions PORQUE NÃO HAVIA FICHEIRO DE TESTES PARA ESTA CLASSE E NÃO SEI SE ERA SUPOSTO CRIAR OU NÃO
+	-> DemoMain
+	-> código gerado, como hashCode(), equals()
+
+- Todos os branches de decisão estão a ter coverage?
+	-> Não!!
+	-> É natural que, havendo menos coverage em termos de instruções, haja menos coverage em termos de branches/caminhos -> quando uma aumenta, a outra também aumenta -> e tendo em conta
+	o código que não foi coberto não ser deveras importante, eu diria que (por enquanto, e tendo em conta os conhecimentos adquiridos na primeira semana) não seja um grande problema.

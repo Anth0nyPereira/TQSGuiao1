@@ -95,9 +95,7 @@ public class SetOfNaturalsTest {
     @DisplayName("If I look for x and a set of naturals contains x, contains() should return true")
     public void containsTest() {
         int number = 50;
-        if (setD.contains(number)){
-            assertTrue(setD.contains(number));
-        }
+        assertTrue(setD.contains(number));
 
     }
 

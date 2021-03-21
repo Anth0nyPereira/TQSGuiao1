@@ -43,7 +43,7 @@ public class SetOfNaturals implements Iterable<Integer> {
 	// I changed this method 'cause I thought it was pretty dumb (only a return false) so, SORRY IF IT WAS NOT SUPPOSED TO BE CHANGED
 	public boolean intersects(SetOfNaturals subset) {
 		Iterator<Integer> iterator = subset.iterator();
-		for (int i=0; i<subset.size(); i++) {
+		while (iterator.hasNext()) {
 			int nextNumber = iterator.next();
 			if (this.contains(nextNumber)) {
 				return true;

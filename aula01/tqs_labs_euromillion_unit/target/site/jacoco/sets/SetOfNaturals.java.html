@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Objects;
 
 <span class="fc" id="L7">public class SetOfNaturals implements Iterable&lt;Integer&gt; {</span>
-
+	// unchanged piece of code
 <span class="fc" id="L9">	private ArrayList&lt;Integer&gt; collection = new ArrayList&lt;&gt;();</span>
 
 	public void add(int element) {
@@ -43,12 +43,12 @@ import java.util.Objects;
 	// I changed this method 'cause I thought it was pretty dumb (only a return false) so, SORRY IF IT WAS NOT SUPPOSED TO BE CHANGED
 	public boolean intersects(SetOfNaturals subset) {
 <span class="fc" id="L45">		Iterator&lt;Integer&gt; iterator = subset.iterator();</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">		for (int i=0; i&lt;subset.size(); i++) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">		while (iterator.hasNext()) {</span>
 <span class="fc" id="L47">			int nextNumber = iterator.next();</span>
 <span class="fc bfc" id="L48" title="All 2 branches covered.">			if (this.contains(nextNumber)) {</span>
 <span class="fc" id="L49">				return true;</span>
 			}
-		}
+<span class="fc" id="L51">		}</span>
 <span class="fc" id="L52">		return false;</span>
 	}
 

@@ -13,8 +13,6 @@ import java.net.URISyntaxException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.isNull;
-import static org.mockito.Mockito.when;
 
 public class AddressResolverIT {
 
@@ -38,6 +36,14 @@ public class AddressResolverIT {
     public void whenBadCoordidates_trhowBadArrayindex() throws IOException, URISyntaxException, ParseException {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             resolver.findAddressForLocation(112, 224);;
+        });
+    }
+
+    @Test
+    public void isNullUrl() {
+        String nullUrl = null;
+        assertThrows(NullPointerException.class, () -> {
+            httpClient.get(nullUrl);
         });
     }
 }

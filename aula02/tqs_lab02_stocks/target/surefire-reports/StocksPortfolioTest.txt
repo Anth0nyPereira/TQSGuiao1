@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: StocksPortfolioTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.02 s <<< FAILURE! - in StocksPortfolioTest
+getTotalValue  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.NoSuchMethodError: 'org.mockito.session.MockitoSessionBuilder org.mockito.Mockito.mockitoSession()'
+

@@ -1,6 +1,5 @@
 package tqsdemo.employeemngr.employee;
-import lombok.Getter;
-import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -8,8 +7,6 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "tqs_employee")
-@Getter
-@Setter
 public class Employee {
 
     static final int MAX_NAME_SIZE = 20;

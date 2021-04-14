@@ -1,10 +1,14 @@
-package deti.ua.tqs_lab04_cars.entity;
+package deti.ua.tqs_lab04_cars;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import java.util.Objects;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "car")
 public class Car {

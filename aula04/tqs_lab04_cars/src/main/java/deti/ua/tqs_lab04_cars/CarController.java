@@ -1,7 +1,7 @@
-package deti.ua.tqs_lab04_cars.controller;
+package deti.ua.tqs_lab04_cars;
 
-import deti.ua.tqs_lab04_cars.entity.Car;
-import deti.ua.tqs_lab04_cars.service.CarManagerService;
+import deti.ua.tqs_lab04_cars.Car;
+import deti.ua.tqs_lab04_cars.CarManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +30,7 @@ public class CarController {
     }
 
     @GetMapping(path="/car/{id}")
-    public ResponseEntity<Optional<Car>> getCarById(@RequestBody Long longId) {
+    public ResponseEntity<Optional<Car>> getCarById(@PathVariable Long longId) {
         HttpStatus status = HttpStatus.FOUND;
         Optional<Car> foundedCar = carManagerService.getCarDetails(longId);
         return new ResponseEntity<>(foundedCar, status);

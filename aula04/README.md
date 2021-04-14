@@ -38,7 +38,7 @@ c)What is the difference between standard @Mock and @MockBean?
 
 
 d)What is the role of the file “application-integrationtest.properties”? In which conditions will it be used?
-- it's used to maintain a number of application properties together in a single file so that you can run the integration test in a different device and/or environment, recurring to a real database
+- it's used to maintain a set of application properties together in a single file so that you can run the integration test in a different device and/or environment, recurring to a real database
 
 
 

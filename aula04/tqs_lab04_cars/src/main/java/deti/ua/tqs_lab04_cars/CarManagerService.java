@@ -1,6 +1,8 @@
-package deti.ua.tqs_lab04_cars.service;
+package deti.ua.tqs_lab04_cars;
 
-import deti.ua.tqs_lab04_cars.entity.Car;
+import deti.ua.tqs_lab04_cars.Car;
+import deti.ua.tqs_lab04_cars.CarRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,17 +13,19 @@ import java.util.Optional;
 @Transactional
 public class CarManagerService {
 
-   //private CarRepository carRepository;
+    @Autowired
+    private CarRepository carRepository;
 
     public Car save(Car car) {
+        carRepository.save(car);
         return car;
     }
 
     public List<Car> getAllCars() {
-        return null;
+        return carRepository.findAll();
     }
 
     public Optional<Car> getCarDetails(Long longId) {
-        return null;
+        return Optional.ofNullable(carRepository.findByCarId(longId));
     }
 }

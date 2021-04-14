@@ -29,7 +29,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@ComponentScan({"deti.ua.tqs_lab04_cars.service", "deti.ua.tqs_lab04_cars.controller", "deti.ua.tqs_lab04_cars.entity", "deti.ua.tqs_lab04_cars.repository"})
 @WebMvcTest(CarController.class)
 class CarControllerMockServiceIT {
 
@@ -49,7 +48,7 @@ class CarControllerMockServiceIT {
     @Test
     public void whenPostCarCreateCar( ) throws Exception {
         Car ordinaryCar = new Car(1L, "Opel", "Corsa");
-
+        
         when(service.save(Mockito.any())).thenReturn(ordinaryCar);
 
         mvc.perform(post("/api/cars").contentType(MediaType.APPLICATION_JSON).content(JsonUtil.toJson(ordinaryCar)))

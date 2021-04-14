@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"deti.ua.tqs_lab04_cars.service", "deti.ua.tqs_lab04_cars.controller", "deti.ua.tqs_lab04_cars.entity", "deti.ua.tqs_lab04_cars.repository"})
 public class TqsLab04CarsApplication {
 
 	public static void main(String[] args) {

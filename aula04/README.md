@@ -26,7 +26,7 @@
 	-> assertThat(fromDb.getEmail()).isEqualTo( emp.getEmail()); (line 43)
 	-> assertThat(fromDb).isNull(); (line 49)
 	-> assertThat(allEmployees).hasSize(3).extracting(Employee::getName).containsOnly(alex.getName(), ron.getName(), bob.getName()); (line 65)
-	```
+```
 
 # b) Identify an example in which you mock the behaviour of the repository (and avoid involving a database). 
 

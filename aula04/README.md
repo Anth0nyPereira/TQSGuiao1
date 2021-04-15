@@ -1,4 +1,7 @@
 ## Exercise 1 - questions
+<p align="center">
+![monophy](https://user-images.githubusercontent.com/60923555/114907834-6621f200-9e13-11eb-913b-313a5a618459.gif)
+</p>
 
 # a) Identify a couple of examples on the use of AssertJ expressive methods chaining.
 

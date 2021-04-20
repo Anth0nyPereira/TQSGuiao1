@@ -1,9 +1,7 @@
 package com.hascode.tutorial.cucumber.book;
 
-import org.junit.runner.RunWith;
+import io.cucumber.junit.platform.engine.Cucumber;
 
-import cucumber.api.junit.Cucumber;
-
-@RunWith(Cucumber.class)
+@Cucumber
 public class BookSearchTest {
 }

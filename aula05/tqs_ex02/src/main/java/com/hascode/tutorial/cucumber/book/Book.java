@@ -1,5 +1,6 @@
 package com.hascode.tutorial.cucumber.book;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Book {
@@ -13,5 +14,15 @@ public class Book {
         this.published = published;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public Date getPublished() {
+        return published;
+    }
 }

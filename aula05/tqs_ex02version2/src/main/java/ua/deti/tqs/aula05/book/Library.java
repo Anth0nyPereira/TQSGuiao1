@@ -1,11 +1,7 @@
 package ua.deti.tqs.aula05.book;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Library {
@@ -17,7 +13,6 @@ public class Library {
 
     public List<Book> findBooks(final LocalDateTime from, final LocalDateTime to) {
         Calendar end = Calendar.getInstance();
-        // https://www.baeldung.com/java-date-to-localdate-and-localdatetime
         Date fromDate = java.sql.Timestamp.valueOf(from);
         Date toDate = java.sql.Timestamp.valueOf(to);
         end.setTime(toDate);

@@ -23,13 +23,13 @@ public class BookSearchSteps {
         LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(year), 01, 01, 0, 0);
         return ldt;
     }
-    /*
-    @ParameterType("(([0-9]{4})-([0-9]{2})-([0-9]{2})")
+
+    @ParameterType("([0-9]{4})-([0-9]{2})-([0-9]{2})")
     public LocalDateTime date(String year, String month, String day){
         return LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day),0, 0);
     }
-    */
 
+    /*
     @ParameterType("([0-9]{2}) (January/March/August) ([0-9]{4})")
     public LocalDateTime date(String day, String month, String year) {
         int monthNumber;
@@ -52,8 +52,9 @@ public class BookSearchSteps {
         LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(day), monthNumber, Integer.parseInt(year),0, 0);
         return ldt;
     }
+     */
 
-    @Given("a/another book with the title {string}, written by {string}, published in {date}")
+    @Given("(a/another) book with the title {string}, written by {string}, published in {date}")
     public void addNewBook(final String title, final String author, final LocalDateTime published) {
         System.out.println(published);
         Book book = new Book(title, author, published);

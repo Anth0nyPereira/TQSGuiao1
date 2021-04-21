@@ -30,7 +30,7 @@ public class BookSearchSteps {
     }
     */
 
-    @ParameterType("([0-9]{2}) (January|March|August) ([0-9]{4})")
+    @ParameterType("([0-9]{2}) (January/March/August) ([0-9]{4})")
     public LocalDateTime date(String day, String month, String year) {
         int monthNumber = 0;
         switch(month) {

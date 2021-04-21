@@ -1,5 +1,7 @@
 package com.hascode.tutorial.cucumber.book;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
@@ -14,13 +16,15 @@ public class Library {
         store.add(book);
     }
 
-    public List<Book> findBooks(final Date from, final Date to) {
+    public List<Book> findBooks(final LocalDateTime from, final LocalDateTime to) {
         Calendar end = Calendar.getInstance();
-        end.setTime(to);
+        Date fromDate = Date.from(Instant.from(from));
+        Date toDate = Date.from(Instant.from(to));
+        end.setTime(toDate);
         end.roll(Calendar.YEAR, 1);
 
         return store.stream().filter(book -> {
-            return from.before(book.getPublished()) && end.getTime().after(book.getPublished());
+            return fromDate.before(Date.from(Instant.from(book.getPublished()))) && end.getTime().after(Date.from(Instant.from(book.getPublished())));
         }).sorted(Comparator.comparing(Book::getPublished).reversed()).collect(Collectors.toList());
     }
 }

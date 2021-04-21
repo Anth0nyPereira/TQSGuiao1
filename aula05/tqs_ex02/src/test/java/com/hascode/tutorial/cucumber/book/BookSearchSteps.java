@@ -18,39 +18,50 @@ public class BookSearchSteps {
     Library library = new Library();
     List<Book> result = new ArrayList<>();
 
-    @ParameterType("([0-9]{4})-([0-9]{2})-([0-9]{2})")
-    public Date date(String year, String month, String day) {
-       LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), 0, 0);
-        Date date = Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant());
-       return date;
+    @ParameterType("([0-9]{4})")
+    public LocalDateTime year(String year) throws ParseException {
+        LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(year), 01, 01, 0, 0);
+        return ldt;
+    }
+    /*
+    @ParameterType("(([0-9]{4})-([0-9]{2})-([0-9]{2})")
+    public LocalDateTime date(String year, String month, String day){
+        return LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day),0, 0);
+    }
+    */
+
+    @ParameterType("([0-9]{2}) (January|March|August) ([0-9]{4})")
+    public LocalDateTime date(String day, String month, String year) {
+        int monthNumber = 0;
+        switch(month) {
+            case "January":
+                monthNumber = 1;
+                break;
+
+            case "March":
+                monthNumber = 3;
+                break;
+
+            case "August":
+                monthNumber = 8;
+                break;
+
+            default:
+                monthNumber = 1;
+        }
+        LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(day), monthNumber, Integer.parseInt(year),0, 0);
+        return ldt;
     }
 
-    @ParameterType("[0-9]{4}")
-    public Date year(String initialYear) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-        Date year = sdf.parse(initialYear);
-        System.out.println(year);
-        return year;
-    }
-/*
     @Given("(a|another) book with the title {string} written by {string}, published in {date}")
-    public void addNewBook(final String title, final String author, final Date published) {
+    public void addNewBook(final String title, final String author, final LocalDateTime published) {
+        System.out.println(published);
         Book book = new Book(title, author, published);
         library.addBook(book);
     }
 
- */
-
-    @Given("(a|another) book with the title {string}, written by {string}, published in {int} - {int} - {int}")
-    public void addNewBook(final String title, final String author, final int year, final int month, final int day) {
-        LocalDateTime ldt = LocalDateTime.of(year, month, day, 0, 0);
-        Date date = Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant());
-        Book book = new Book(title, author, date);
-        library.addBook(book);
-    }
-
     @When("the customer searches for books published between {year} and {year}")
-    public void setSearchParameters(final Date from, final Date to) {
+    public void setSearchParameters(final LocalDateTime from, LocalDateTime to) {
         result = library.findBooks(from, to);
     }
 

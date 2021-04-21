@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia;
+package ua.deti.tqs.aula05.calculator;
 
 import static java.util.Arrays.asList;
 

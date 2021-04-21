@@ -1,12 +1,10 @@
-package com.hascode.tutorial.cucumber.book;
+package ua.deti.tqs.aula05.book;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.*;
 
 import io.cucumber.java.ParameterType;

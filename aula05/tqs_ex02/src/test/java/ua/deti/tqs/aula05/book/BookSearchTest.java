@@ -1,4 +1,4 @@
-package com.hascode.tutorial.cucumber.book;
+package ua.deti.tqs.aula05.book;
 
 import io.cucumber.junit.platform.engine.Cucumber;
 

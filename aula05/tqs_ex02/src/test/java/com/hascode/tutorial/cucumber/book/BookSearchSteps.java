@@ -53,7 +53,7 @@ public class BookSearchSteps {
         return ldt;
     }
 
-    @Given("(a|another) book with the title {string} written by {string}, published in {date}")
+    @Given("(a/another) book with the title {string} written by {string}, published in {date}")
     public void addNewBook(final String title, final String author, final LocalDateTime published) {
         System.out.println(published);
         Book book = new Book(title, author, published);

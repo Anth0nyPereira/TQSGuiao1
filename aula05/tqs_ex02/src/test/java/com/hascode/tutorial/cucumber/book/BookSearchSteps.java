@@ -32,7 +32,7 @@ public class BookSearchSteps {
 
     @ParameterType("([0-9]{2}) (January/March/August) ([0-9]{4})")
     public LocalDateTime date(String day, String month, String year) {
-        int monthNumber = 0;
+        int monthNumber;
         switch(month) {
             case "January":
                 monthNumber = 1;
@@ -53,7 +53,7 @@ public class BookSearchSteps {
         return ldt;
     }
 
-    @Given("(a/another) book with the title {string} written by {string}, published in {date}")
+    @Given("a/another book with the title {string}, written by {string}, published in {date}")
     public void addNewBook(final String title, final String author, final LocalDateTime published) {
         System.out.println(published);
         Book book = new Book(title, author, published);

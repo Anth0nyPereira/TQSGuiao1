@@ -18,3 +18,15 @@ Feature: Book search
     Then 2 books should have been found
     And Book 1 should have the title 'Outlander'
     And Book 2 should have the title 'Dragonfly in Amber'
+
+
+  Scenario: Search book with a word in common
+    Given a book with the title 'Demon Slayer', written by 'Koyoharu Gotouge', published in 2016-02-15
+    And another book with the title 'Goblin Slayer', written by 'Kagyu Kumo', published in 2016-05-25
+    And another book with the title 'BTOOOM!', written by 'Junya Inoue', published in 2009-06-19
+    And another book with the title 'Slayers', written by 'Hajime Kanzaka', published in 1990-01-17
+    When a customer searches for books that have 'Slayer' in the title
+    Then 3 books should have been found
+    And Book 1 should have the title 'Demon Slayer'
+    And Book 2 should have the title 'Goblin Slayer'
+    And Book 3 should have the title 'Slayers'

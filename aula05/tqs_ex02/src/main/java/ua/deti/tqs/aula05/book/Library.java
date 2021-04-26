@@ -37,4 +37,14 @@ public class Library {
         }
         return result;
     }
+
+    public List<Book> findBooksByWord(String word) {
+        List<Book> result = new ArrayList<>();
+        for (Book book: store) {
+            if (book.getTitle().contains(word)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
 }

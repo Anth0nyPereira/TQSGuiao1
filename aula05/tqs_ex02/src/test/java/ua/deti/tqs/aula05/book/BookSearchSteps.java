@@ -53,4 +53,8 @@ public class BookSearchSteps {
         result = library.findBooksByAuthor(author);
     }
 
+    @When("a customer searches for books that have {string} in the title")
+    public void aCustomerSearchesForBooksThatHaveCertainWordInTheTitle(String word) {
+        result = library.findBooksByWord(word);
+    }
 }

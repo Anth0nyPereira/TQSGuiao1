@@ -27,4 +27,14 @@ public class Library {
             return fromDate.before(java.sql.Timestamp.valueOf(book.getPublished())) && end.getTime().after(java.sql.Timestamp.valueOf(book.getPublished()));
         }).sorted(Comparator.comparing(Book::getPublished).reversed()).collect(Collectors.toList());
     }
+
+    public List<Book> findBooksByAuthor(String author) {
+        List<Book> result = new ArrayList<>();
+        for (Book book: store) {
+            if (book.getAuthor().equals(author)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
 }

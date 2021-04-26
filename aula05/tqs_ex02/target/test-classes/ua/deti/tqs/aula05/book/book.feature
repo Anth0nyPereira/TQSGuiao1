@@ -9,3 +9,12 @@ Feature: Book search
     Then 2 books should have been found
     And Book 1 should have the title 'Some other book'
     And Book 2 should have the title 'One good book'
+
+  Scenario: Search book by author
+    Given a book with the title 'Outlander', written by 'Diana Gabaldon', published in 1991-06-01
+    And another book with the title 'Dragonfly in Amber', written by 'Diana Gabaldon', published in 1992-07-01
+    And another book with the title 'The Catcher in the Rye', written by 'J. D. Salinger', published in 1951-07-16
+    When a customer looks up for books by the author 'Diana Gabaldon'
+    Then 2 books should have been found
+    And Book 1 should have the title 'Outlander'
+    And Book 2 should have the title 'Dragonfly in Amber'

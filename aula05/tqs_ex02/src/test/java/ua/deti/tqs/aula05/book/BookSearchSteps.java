@@ -29,7 +29,6 @@ public class BookSearchSteps {
 
     @Given("(a/another) book with the title {string}, written by {string}, published in {date}")
     public void addNewBook(final String title, final String author, final LocalDateTime published) {
-        System.out.println(published);
         Book book = new Book(title, author, published);
         library.addBook(book);
     }
@@ -48,4 +47,10 @@ public class BookSearchSteps {
     public void verifyBookAtPosition(final int position, final String title) {
         assertThat(result.get(position - 1).getTitle(), equalTo(title));
     }
+
+    @When("a customer looks up for books by the author {string}")
+    public void aCustomerLooksUpForBooksByTheAuthor(String author) {
+        result = library.findBooksByAuthor(author);
+    }
+
 }

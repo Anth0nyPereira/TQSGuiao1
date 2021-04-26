@@ -18,9 +18,21 @@ public class BookSearchSteps {
     List<Book> result = new ArrayList<>();
 
     @ParameterType("([0-9]{4})")
-    public LocalDateTime year(String year) {
-        LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(year), 01, 01, 0, 0);
+    public LocalDateTime yearDate(String yearDate) {
+        LocalDateTime ldt = LocalDateTime.of(Integer.parseInt(yearDate), 01, 01, 0, 0);
         return ldt;
+    }
+
+    @ParameterType("([0-9]{2})")
+    public int day(String day) {
+        int dayInt = Integer.parseInt(day);
+        return dayInt;
+    }
+
+    @ParameterType("([0-9]{4})")
+    public int year(String year) {
+        int yearInt = Integer.parseInt(year);
+        return yearInt;
     }
 
     @ParameterType("January|March|August")
@@ -52,14 +64,14 @@ public class BookSearchSteps {
     }
 
 
-    @Given("(a/another) book with the title {string}, written by {string}, published in {int} {month} {int}")
+    @Given("(a/another) book with the title {string}, written by {string}, published in {day} {month} {year}")
     public void addNewBook(final String title, final String author, int day, Month month, int year) {
         LocalDateTime published = makeDate(day, month, year);
         Book book = new Book(title, author, published);
         library.addBook(book);
     }
 
-    @When("the customer searches for books published between {year} and {year}")
+    @When("the customer searches for books published between {yearDate} and {yearDate}")
     public void setSearchParameters(final LocalDateTime from, LocalDateTime to) {
         result = library.findBooks(from, to);
     }

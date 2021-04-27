@@ -15,3 +15,13 @@ Security Hotspots   Weak Cryptography - Random                  Use "java.securi
 Code Smell (major)  Refactor loop code                          Refactor the code in order to not assign to this loop counter from within the loop body
 
 Code Smell (major)  Replace System.out                          Replace this use of System.out or System.err by a logger
+
+
+
+Task 2
+
+2a/ Take note of the technical debt found. Explain what this value means.
+- The technical debt (or just 'Debt') is the estimated time that the developer will spend to refactor the code to fix all maintainability issues; measured in minutes - Anthony Pereira, 2021
+- Is a concept in software development that reflects the implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better approach that would take longer - Wikipedia, consulted on 27th of April 2021
+
+

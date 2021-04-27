@@ -57,18 +57,16 @@ public class Dip {
     public static Dip generateRandomDip() {
         Random generator = getGenerator();
         Dip randomDip = new Dip();
-        for (int i = 0; i < NUMBER_OF_NUMBERS; ) {
+        for (int i = 0; i < NUMBER_OF_NUMBERS; i++) {
             int candidate = generator.nextInt(MAX_NUMBER - 1) + 1;
             if (!randomDip.getNumbersColl().contains(candidate)) {
                 randomDip.getNumbersColl().add(candidate);
-                i++;
             }
         }
-        for (int i = 0; i < NUMBER_OF_STARS; ) {
+        for (int i = 0; i < NUMBER_OF_STARS; i++) {
             int candidate = generator.nextInt(MAX_STAR - 1) + 1;
             if (!randomDip.getStarsColl().contains(candidate)) {
                 randomDip.getStarsColl().add(candidate);
-                i++;
             }
         }
         return randomDip;

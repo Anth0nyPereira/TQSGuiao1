@@ -3,6 +3,7 @@ package ui;
 import euromillions.CuponEuromillions;
 import euromillions.Dip;
 import euromillions.EuromillionsDraw;
+import org.apache.log4j.Logger;
 
 public class DemoMain {
 
@@ -11,9 +12,11 @@ public class DemoMain {
      */
     public static void main(String[] args) {
 
+        Logger log = Logger.getLogger(DemoMain.class.getName());
+
         // played sheet
         CuponEuromillions thisWeek = new CuponEuromillions();
-        System.out.println("Betting with three random bets...");
+        log.info("Betting with three random bets...");
         thisWeek.addDipToCuppon(Dip.generateRandomDip());
         thisWeek.addDipToCuppon(Dip.generateRandomDip());
         thisWeek.addDipToCuppon(Dip.generateRandomDip());
@@ -22,15 +25,15 @@ public class DemoMain {
         EuromillionsDraw draw = EuromillionsDraw.generateRandomDraw();
 
         //report results
-        System.out.println("You played:");
-        System.out.println(thisWeek.format());
+        log.info("You played:");
+        log.info(thisWeek.format());
 
-        System.out.println("Draw results:");
-        System.out.println(draw.getDrawResults().format());
+        log.info("Draw results:");
+        log.info(draw.getDrawResults().format());
 
-        System.out.println("Your score:");
+        log.info("Your score:");
         for (Dip dip : draw.findMatches(thisWeek)) {
-            System.out.println(dip.format());
+            log.info(dip.format());
 
         }
     }

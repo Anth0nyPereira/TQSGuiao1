@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="euromillions.DipTest" time="0.004" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="euromillions.DipTest" time="0.003" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -7,7 +7,7 @@
     <property name="sun.cpu.isalist" value=""/>
     <property name="sonar.login" value="59e937db3c04cad2569f4792ef294525d77568c2"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/test-classes:/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/classes:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/anth0nypereira/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:"/>
+    <property name="java.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/test-classes:/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/classes:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/anth0nypereira/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/anth0nypereira/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PT"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire/surefirebooter11897513934975584676.jar /home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire 2021-04-27T12-14-38_033-jvmRun1 surefire2515888630321798407tmp surefire_02363773264003120643tmp"/>
+    <property name="sun.java.command" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire/surefirebooter7636278214887241350.jar /home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire 2021-04-27T13-57-47_397-jvmRun1 surefire9093027789378521405tmp surefire_08273001078978786712tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/test-classes:/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/classes:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/anth0nypereira/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:"/>
+    <property name="surefire.test.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/test-classes:/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/classes:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/anth0nypereira/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/anth0nypereira/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/anth0nypereira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/anth0nypereira/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/anth0nypereira"/>
     <property name="user.language" value="pt"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire/surefirebooter11897513934975584676.jar"/>
+    <property name="surefire.real.class.path" value="/home/anth0nypereira/Desktop/LEI/TQS/TQSPortfolio/aula06/tqs_labs_euromillion_unit/target/surefire/surefirebooter7636278214887241350.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="anth0nypereira"/>
@@ -59,5 +59,5 @@
     <property name="java.class.version" value="55.0"/>
   </properties>
   <testcase name="testConstructorFromBadArrays" classname="euromillions.DipTest" time="0.001"/>
-  <testcase name="testFormat" classname="euromillions.DipTest" time="0.002"/>
+  <testcase name="testFormat" classname="euromillions.DipTest" time="0.001"/>
 </testsuite>

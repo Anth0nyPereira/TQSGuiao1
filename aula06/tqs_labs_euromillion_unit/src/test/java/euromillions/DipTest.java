@@ -11,7 +11,7 @@ import org.junit.jupiter.api.*;
 /**
  * @author ico0
  */
-public class DipTest {
+class DipTest {
 
     private Dip instance;
     private Dip badInstance;
@@ -31,7 +31,7 @@ public class DipTest {
 
 
     @Test
-    public void testConstructorFromBadArrays() {
+    void testConstructorFromBadArrays() {
         assertThrows(IllegalArgumentException.class, () -> {
             new Dip(new int[]{10, 20, 30, 40, 50, 60}, new int[]{1, 2, 3});
         });
@@ -44,7 +44,7 @@ public class DipTest {
     }
 
     @Test
-    public void testFormat() {
+    void testFormat() {
         // note: correct the implementation of the format(), not the test...
         String result = instance.format();
         assertEquals("N[ 10 20 30 40 50] S[  1  2]", result, "format as string: formatted string not as expected. ");

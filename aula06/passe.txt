@@ -1,0 +1,10 @@
+passe sonarqube:
+ananas
+
+token sonarqube:
+59e937db3c04cad2569f4792ef294525d77568c2
+
+command mvn sonaqube:
+mvn clean verify sonar:sonar -Dsonar.login=59e937db3c04cad2569f4792ef294525d77568c2
+
+
